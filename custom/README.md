@@ -1,4 +1,4 @@
-# Fofuros custom build (ptbr27)
+# Fofuros custom build (ptbr29)
 
 `hacasa-nova.js` is the build installed in the Fofuros House Home Assistant. It is the 3.0.0 build with a Brazilian Portuguese translation plus local patches. These changes are made on the compiled file, not in `src/`.
 
@@ -17,7 +17,7 @@
 ```yaml
 panel_custom:
   - name: hacasa-nova
-    module_url: /local/hacasa-nova/hacasa-nova.js?v=3.0.0-ptbr27
+    module_url: /local/hacasa-nova/hacasa-nova.js?v=3.0.0-ptbr29
 template:
   - binary_sensor:
       - name: Estado Portão Garagem
@@ -29,3 +29,6 @@ Bump `?v=` after every change and restart Home Assistant Core. The per-user HaCa
 
 ## ptbr26–27
 - Tablet (Fire HD 10): removed `:has()` dependency (old WebView ignores it). Climate cards now get taller via a `hasac` class set by JS on `.strip`, and the title block is anchored with a plain `.title` rule, raising greeting, quick actions and weather to leave room above the cards.
+
+## ptbr28–29
+- Default background is now a brown gradient (`hue 12`) on every page (home, rooms, settings/"Mais" pages) whenever no photo is configured. Photos still work via the panel settings (Foto startpagina / Kamerfoto).
